@@ -1,0 +1,25 @@
+ARG IMAGE_REPOSITORY
+# pull official base image, see https://hub.docker.com/r/zhicwu/prom/
+FROM ${IMAGE_REPOSITORY}/nginx:stable-alpine
+
+# See https://stackoverflow.com/questions/29261811/use-docker-compose-env-variable-in-dockerbuild-file
+ARG PROXY_USER
+ARG PROXY_PASSWORD
+ARG PROXY_FQDN
+ARG PROXY_PORT
+
+ENV HTTP_PROXY="http://${PROXY_USER}:${PROXY_PASSWORD}@${PROXY_FQDN}:${PROXY_PORT}"
+ENV HTTPS_PROXY="http://${PROXY_USER}:${PROXY_PASSWORD}@${PROXY_FQDN}:${PROXY_PORT}"
+
+# set working directory
+WORKDIR /etc/nginx
+
+# add config
+COPY ./nginx.prod.conf ./conf.d/default.conf
+
+# expose port
+EXPOSE 80
+
+# start app
+ENTRYPOINT [ "nginx" ]
+CMD [ "-g", "daemon off;" ]
