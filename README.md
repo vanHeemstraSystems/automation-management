@@ -1,4 +1,4 @@
-[![publish](https://github.com/vanHeemstraSystems/foo-management/actions/workflows/publish.yml/badge.svg)](https://github.com/vanHeemstraSystems/foo-management/actions/workflows/publish.yml)
+[![Quarto Publish](https://github.com/vanHeemstraSystems/automation-management/actions/workflows/publish.yml/badge.svg)](https://github.com/vanHeemstraSystems/automation-management/actions/workflows/publish.yml)
 
 automation-management
 # Automation Management
