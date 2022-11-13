@@ -1,0 +1,96 @@
+version: "3.7"
+
+secrets:
+  database_password:
+    file: ./secrets/.database_password
+  proxy_password:
+    file: ./secrets/.proxy_password  
+
+# See https://stackoverflow.com/questions/29261811/use-docker-compose-env-variable-in-dockerbuild-file
+services:
+
+  main:
+    secrets:
+      - proxy_password
+    build:
+      context: ./main
+      dockerfile: Dockerfile.prod
+      args: # from env_file
+        UNIQUE_NAMESPACE: ${UNIQUE_NAMESPACE}
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}
+        NODE_ENV: production
+    env_file:
+      - .env
+    container_name: ${UNIQUE_NAMESPACE}-main-prod
+    security_opt:
+      - no-new-privileges:true
+    privileged: true      
+    ports:
+      - "3020:3020"
+    volumes:
+      - ./main:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPULLING=true
+    #  - PROXY_PASSWORD='/run/secrets/proxy_password'
+    depends_on:
+      - "home-assistant"    
+
+  home-assistant:
+    secrets:
+      - proxy_password
+    build:
+      context: ./home-assistant
+      dockerfile: Dockerfile.prod
+      args: # from env_file
+        UNIQUE_NAMESPACE: ${UNIQUE_NAMESPACE}
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}
+        # NODE_ENV: production
+        # BASE_VERSION: 14-alpine
+        # USER: ${USER}
+        # NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL_PROD}
+    env_file:
+      - .env
+    container_name: ${UNIQUE_NAMESPACE}-home-assistant-prod
+    security_opt:
+      - no-new-privileges:true
+    privileged: true      
+    ports:
+      - "5909:5909"
+    # volumes:
+    #  - ./home-assistant:/app
+    #  - /prom/node_modules
+    # environment:
+    #  - PROXY_PASSWORD='/run/secrets/proxy_password' 
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.prod
+      args: # from env_file
+        UNIQUE_NAMESPACE: ${UNIQUE_NAMESPACE}
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}    
+    env_file:
+      - .env
+    container_name: ${UNIQUE_NAMESPACE}-nginx-prod
+    extra_hosts:
+      - "host.docker.internal:host-gateway"    
+    security_opt:
+      - no-new-privileges:true
+    privileged: true
+    ports:
+      - "80:80"
+    depends_on:
+      - "main"
