@@ -1,5 +1,5 @@
 ---
-title: "Foo Management"
+title: "Automation Management"
 ---
 
 This is a Quarto website.
