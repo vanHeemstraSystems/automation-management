@@ -66,8 +66,8 @@ services:
     ports:
       - "5908:5908"
     # volumes:
-    #  - ./cms:/app
-    #  - /cms/node_modules
+    #  - ./home-assistant:/app
+    #  - /home-assistant/node_modules
     # environment:
     #  - PROXY_PASSWORD='/run/secrets/proxy_password'
 
