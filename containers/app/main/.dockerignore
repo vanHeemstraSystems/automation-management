@@ -1,0 +1,5 @@
+# See https://www.appsloveworld.com/reactjs/100/7/nextjs-fails-to-find-valid-build-in-the-next-directory-in-production-node-env
+.dockerignore
+sample.*
+.next
+node_modules
