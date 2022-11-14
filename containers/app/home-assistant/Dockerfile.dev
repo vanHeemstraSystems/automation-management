@@ -13,3 +13,5 @@ ENV HTTPS_PROXY="http://${PROXY_USER}:${PROXY_PASSWORD}@${PROXY_FQDN}:${PROXY_PO
 
 # set working directory
 WORKDIR /app
+
+# More ...
