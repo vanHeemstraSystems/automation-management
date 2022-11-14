@@ -62,9 +62,10 @@ services:
     container_name: ${UNIQUE_NAMESPACE}-home-assistant-dev
     security_opt:
       - no-new-privileges:true
-    privileged: true      
+    privileged: true
+    restart: unless-stopped
     ports:
-      - "5908:5908"
+      - "8122:8122"
     # volumes:
     #  - ./home-assistant:/app
     #  - /home-assistant/node_modules
