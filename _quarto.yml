@@ -5,10 +5,20 @@ project:
 website:
   title: "Automation Management"
   navbar:
+    background: primary
+    search: true
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Home"
+        file: index.qmd
+      - text: "Introduction"
+        file: introduction.qmd
+
+sidebar:
+  - title: "Introduction"
+    style: "docked"
+    background: light
+    contents:
+      - introduction.qmd
 
 format:
   html:
