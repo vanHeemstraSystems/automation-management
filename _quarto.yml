@@ -15,7 +15,9 @@ website:
       - text: "Requirements"
         file: requirements.qmd 
       - text: "Building Our Application"
-        file: building-our-application.qmd        
+        file: building-our-application.qmd
+      - text: "Conclusion"
+        file: conclusion.qmd        
 
 sidebar:
   - title: "Introduction"
@@ -33,7 +35,12 @@ sidebar:
     background: light
     contents:
       - building-our-application.qmd
-
+  - title: "Conclusion"
+    style: "docked"
+    background: light
+    contents:
+      - conclusion.qmd
+      
 format:
   html:
     theme: cosmo
