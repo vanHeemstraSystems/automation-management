@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Foo - Management](README.md)
+* [Automation Management](README.md)
