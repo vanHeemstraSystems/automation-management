@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/vanHeemstraSystems/automation-management/conclusion.html</loc>
+    <lastmod>2022-11-20T21:29:56.606Z</lastmod>
+  </url>
+  <url>
     <loc>https://github.com/vanHeemstraSystems/automation-management/index.html</loc>
-    <lastmod>2022-11-20T21:27:14.354Z</lastmod>
+    <lastmod>2022-11-20T21:29:57.338Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/vanHeemstraSystems/automation-management/building-our-application.html</loc>
-    <lastmod>2022-11-20T21:27:14.966Z</lastmod>
+    <lastmod>2022-11-20T21:29:57.702Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/vanHeemstraSystems/automation-management/requirements.html</loc>
-    <lastmod>2022-11-20T21:27:15.410Z</lastmod>
+    <lastmod>2022-11-20T21:29:58.026Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/vanHeemstraSystems/automation-management/demo.html</loc>
-    <lastmod>2022-11-20T21:27:15.738Z</lastmod>
+    <lastmod>2022-11-20T21:29:58.366Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/vanHeemstraSystems/automation-management/introduction.html</loc>
-    <lastmod>2022-11-20T21:27:16.006Z</lastmod>
+    <lastmod>2022-11-20T21:29:58.686Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/vanHeemstraSystems/automation-management/about.html</loc>
-    <lastmod>2022-11-20T21:27:16.270Z</lastmod>
+    <lastmod>2022-11-20T21:29:59.011Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/vanHeemstraSystems/automation-management/SUMMARY.html</loc>
-    <lastmod>2022-11-20T21:27:16.538Z</lastmod>
+    <lastmod>2022-11-20T21:29:59.335Z</lastmod>
   </url>
 </urlset>
