@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Foo Management",
+    "title": "Automation Management",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "about.html",
@@ -18,6 +18,6 @@
     "href": "SUMMARY.html",
     "title": "Foo Management",
     "section": "",
-    "text": "Foo - Management"
+    "text": "Table of contents\n\nFoo - Management"
   }
 ]
