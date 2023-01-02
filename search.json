@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "SUMMARY.html",
+    "href": "SUMMARY.html",
+    "title": "Automation Management",
+    "section": "",
+    "text": "Table of contents\n\nAutomation Management"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Introduction to this site"
+  },
+  {
+    "objectID": "building-our-application.html",
+    "href": "building-our-application.html",
+    "title": "Building Our Application",
+    "section": "",
+    "text": "Building the application of this site"
+  },
+  {
     "objectID": "conclusion.html",
     "href": "conclusion.html",
     "title": "Conclusion",
@@ -14,38 +42,10 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "building-our-application.html",
-    "href": "building-our-application.html",
-    "title": "Building Our Application",
-    "section": "",
-    "text": "Building the application of this site"
-  },
-  {
     "objectID": "requirements.html",
     "href": "requirements.html",
     "title": "Requirements",
     "section": "",
     "text": "Requirements of the application of this site"
-  },
-  {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "Introduction to this site"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "SUMMARY.html",
-    "href": "SUMMARY.html",
-    "title": "Automation Management",
-    "section": "",
-    "text": "Table of contents\n\nAutomation Management"
   }
 ]
