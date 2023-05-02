@@ -10,6 +10,8 @@ website:
     left:
       - text: "Home"
         file: index.qmd
+      - about.qmd
+      - services.qmd  
       - text: "Introduction"
         file: introduction.qmd
       - text: "Requirements"
