@@ -1,6 +1,6 @@
 ARG IMAGE_REPOSITORY
 # pull official base image, see https://hub.docker.com/r/zhicwu/prom/
-FROM ${IMAGE_REPOSITORY}/homeassistant/home-assistant:stable
+FROM ${IMAGE_REPOSITORY}/homeassistant/home-assistant:2022.12
 
 # See https://stackoverflow.com/questions/29261811/use-docker-compose-env-variable-in-dockerbuild-file
 ARG PROXY_USER
@@ -15,3 +15,5 @@ ENV HTTPS_PROXY="http://${PROXY_USER}:${PROXY_PASSWORD}@${PROXY_FQDN}:${PROXY_PO
 WORKDIR /app
 
 # More ...
+# expose port
+EXPOSE 8122
