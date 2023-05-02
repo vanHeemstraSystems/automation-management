@@ -53,10 +53,6 @@ services:
         PROXY_PASSWORD: ${PROXY_PASSWORD}
         PROXY_FQDN: ${PROXY_FQDN}
         PROXY_PORT: ${PROXY_PORT}
-        # NODE_ENV: development
-        # BASE_VERSION: 14-alpine
-        # USER: ${USER}
-        # NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL_DEV}
     env_file:
       - .env
     container_name: ${UNIQUE_NAMESPACE}-home-assistant-dev
@@ -73,6 +69,32 @@ services:
     #  - PROXY_PASSWORD='/run/secrets/proxy_password'
     depends_on:
       - "home-assistant-dashboard"
+
+  home-assistant-dashboard:
+    secrets:
+      - proxy_password
+    build:
+      context: ./home-assistant-dashboard
+      dockerfile: Dockerfile.dev
+      args: # from env_file
+        UNIQUE_NAMESPACE: ${UNIQUE_NAMESPACE}
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}
+    env_file:
+      - .env
+    container_name: ${UNIQUE_NAMESPACE}-home-assistant-dashboard-dev
+    security_opt:
+      - no-new-privileges:true
+    privileged: true
+    restart: unless-stopped
+    ports:
+      - "1234:1234"
+    volumes:
+      - ./home-assistant-dashboard:/app
+      - /app/node_modules     
 
   nginx:
     build:
