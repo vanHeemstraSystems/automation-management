@@ -2,11 +2,11 @@
 title: "Services"
 ---
 
-About this site's Services
+About this site's services
 
 - Home Assistant
 
-In order to access a Custom React Dashboard from within Hoem assistant, add the following lines to home-assistant/config/configuration.yaml:
+In order to access a Custom React Dashboard from within Home Assistant, add the following lines to home-assistant/config/configuration.yaml:
 
 ```
 api:
