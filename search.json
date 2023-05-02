@@ -53,6 +53,6 @@
     "href": "services.html",
     "title": "Services",
     "section": "",
-    "text": "About this site’s Services\n\nHome Assistant\n\nIn order to access a Custom React Dashboard from within Hoem assistant, add the following lines to home-assistant/config/configuration.yaml:\napi:\n\nhttp:\n  cors_allowed_origins:\n    - http://localhost:1234\nMake sure above information matches your settings of the Custom React Dashboard. For that see the docker-compose.dev.yml file for the home-assistant-dashboard service."
+    "text": "About this site’s services\n\nHome Assistant\n\nIn order to access a Custom React Dashboard from within Home Assistant, add the following lines to home-assistant/config/configuration.yaml:\napi:\n\nhttp:\n  cors_allowed_origins:\n    - http://localhost:1234\nMake sure above information matches your settings of the Custom React Dashboard. For that see the docker-compose.dev.yml file for the home-assistant-dashboard service."
   }
 ]
