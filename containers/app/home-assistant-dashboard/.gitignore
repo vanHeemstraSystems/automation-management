@@ -1,0 +1,5 @@
+dist
+.parcel-cache
+.env
+.npmrc
+node_modules
