@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "SUMMARY.html",
-    "href": "SUMMARY.html",
-    "title": "Automation Management",
-    "section": "",
-    "text": "Table of contents\n\nAutomation Management"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "introduction.html",
     "href": "introduction.html",
     "title": "Introduction",
@@ -21,11 +7,11 @@
     "text": "Introduction to this site"
   },
   {
-    "objectID": "building-our-application.html",
-    "href": "building-our-application.html",
-    "title": "Building Our Application",
+    "objectID": "SUMMARY.html",
+    "href": "SUMMARY.html",
+    "title": "Table of contents",
     "section": "",
-    "text": "Building the application of this site"
+    "text": "Table of contents\n\nAutomation Management"
   },
   {
     "objectID": "conclusion.html",
@@ -35,11 +21,11 @@
     "text": "Conclusion of this site"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Automation Management",
+    "objectID": "building-our-application.html",
+    "href": "building-our-application.html",
+    "title": "Building Our Application",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Building the application of this site"
   },
   {
     "objectID": "requirements.html",
@@ -47,5 +33,26 @@
     "title": "Requirements",
     "section": "",
     "text": "Requirements of the application of this site"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Automation Management",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "services.html",
+    "href": "services.html",
+    "title": "Services",
+    "section": "",
+    "text": "About this site’s Services\n\nHome Assistant\n\nIn order to access a Custom React Dashboard from within Hoem assistant, add the following lines to home-assistant/config/configuration.yaml:\napi:\n\nhttp:\n  cors_allowed_origins:\n    - http://localhost:1234\nMake sure above information matches your settings of the Custom React Dashboard. For that see the docker-compose.dev.yml file for the home-assistant-dashboard service."
   }
 ]
