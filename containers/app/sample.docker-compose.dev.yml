@@ -65,12 +65,14 @@ services:
     privileged: true
     restart: unless-stopped
     ports:
-      - "8122:8122"
-    # volumes:
-    #  - ./home-assistant:/app
-    #  - /home-assistant/node_modules
+      - "8122:8123"
+    volumes:
+      - ./config:/config
+      - ./config/custom_components/hacs.zip:/config/custom_components/hacs.zip
     # environment:
     #  - PROXY_PASSWORD='/run/secrets/proxy_password'
+    depends_on:
+      - "home-assistant-dashboard"
 
   nginx:
     build:
