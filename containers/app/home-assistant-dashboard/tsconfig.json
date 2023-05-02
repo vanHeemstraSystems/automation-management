@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "DOM.Iterable", "esnext"],
+      "jsx": "react",
+      "types": ["node"],
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "resolveJsonModule": true,
+      "baseUrl": ".",
+      "paths": {
+        "@root": ["src"],
+        "@authenticate": ["src/Authenticate"],
+        "@hooks": ["src/hooks"],
+        "@areas": ["src/Areas"]
+      }
+    },
+    "include" : ["src/**/*"],
+    "exclude": [
+      ".parcel-cache",
+      "dist",
+      "node_modules"
+    ]
+}
