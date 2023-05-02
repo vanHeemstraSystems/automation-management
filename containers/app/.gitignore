@@ -5,3 +5,4 @@ docker-compose.prod.yml
 .npmrc
 secrets/.database_password
 secrets/.proxy_password
+home-assistant/config/configuration.yaml
